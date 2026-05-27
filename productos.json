@@ -1,23 +1,25 @@
 [
   {
     "id": 1,
-    "nombre": "Tabla Atelier Premium",
+    "nombre": "Tabla Atelier Premium 4 Personas",
     "descripcion": "Selección gourmet de jamón crudo serrano, queso brie, fontina, frutos secos, olivas negras y focaccia casera.",
-    "precio": "$15.500",
-    "imagen": "https://images.unsplash.com/photo-1626132647523-66f5bf380027?auto=format&fit=crop&w=600&q=80"
+    "precio": "$25.000",
+    "imagen": "tabla-premium.jpg"
   },
   {
     "id": 2,
-    "nombre": "Picada Clásica de Campo",
+    "nombre": "Picada Mediana 8 Personas",
     "descripcion": "El sabor de lo nuestro: salame mercedino, queso mar del plata, bondiola, aceitunas verdes y pan de campo.",
-    "precio": "$12.000",
-    "imagen": "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&w=600&q=80"
+    "precio": "$30.000",
+    "imagen": "picada-mediana.jpg"
   },
   {
     "id": 3,
-    "nombre": "Tabla de Quesos Artesanales",
-    "descripcion": "Variedad de cuatro quesos seleccionados (brie, azul, gouda y provolone) acompañados de dip de miel.",
-    "precio": "$13.500",
-    "imagen": "https://images.unsplash.com/photo-1486297678162-ad2a1fa5384d?auto=format&fit=crop&w=600&q=80"
+    "nombre": "BOX Regalo",
+    "descripcion": "Una propuesta gourmet pensada para sorprender y compartir. Selección premium de quesos y fiambres cuidadosamente elegidos, acompañados por aceitunas, frutos secos, grisines artesanales, dips especiales y detalles que realzan cada sabor. Presentada en un box elegante, ideal para regalar en cumpleaños, aniversarios, agradecimientos o simplemente para convertir un momento común en algo especial.
+
+✨ Hecho para compartir, disfrutar y regalar experiencias.",
+    "precio": "$20.000",
+    "imagen": "box-regalo.jpg"
   }
 ]
