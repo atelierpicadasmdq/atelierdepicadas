@@ -16,9 +16,7 @@
   {
     "id": 3,
     "nombre": "BOX Regalo",
-    "descripcion": "Una propuesta gourmet pensada para sorprender y compartir. Selección premium de quesos y fiambres cuidadosamente elegidos, acompañados por aceitunas, frutos secos, grisines artesanales, dips especiales y detalles que realzan cada sabor. Presentada en un box elegante, ideal para regalar en cumpleaños, aniversarios, agradecimientos o simplemente para convertir un momento común en algo especial.
-
-✨ Hecho para compartir, disfrutar y regalar experiencias.",
+    "descripcion": "Una propuesta gourmet pensada para sorprender y compartir. Selección premium de quesos y fiambres cuidadosamente elegidos, acompañados por aceitunas, frutos secos, grisines artesanales, dips especiales y detalles que realzan cada sabor. Presentada en un box elegante, ideal para regalar en cumpleaños, aniversarios, agradecimientos o simplemente para convertir un momento común en algo especial. ✨ Hecho para compartir, disfrutar y regalar experiencias.",
     "precio": "$20.000",
     "imagen": "box-regalo.jpg"
   }
