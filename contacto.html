@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Atelier de Picadas</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        .font-serif { font-family: 'Cormorant Garamond', serif; }
+        .font-sans { font-family: 'Montserrat', sans-serif; }
+    </style>
+</head>
+<body class="bg-[#121212] text-[#f5f5f5] font-sans antialiased">
+
+    <nav class="border-b border-[#2a2a2a] bg-[#121212]/90 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="font-serif text-2xl tracking-widest text-[#d4af37]">ATELIER DE PICADAS</a>
+            <div class="space-x-8 text-sm tracking-widest uppercase">
+                <a href="index.html" class="hover:text-[#d4af37] transition-colors">Inicio</a>
+                <a href="nosotros.html" class="hover:text-[#d4af37] transition-colors">Nosotros</a>
+                <a href="contacto.html" class="text-[#d4af37] border-b border-[#d4af37] pb-1">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-4xl mx-auto px-6 py-20">
+        <div class="text-center mb-16">
+            <p class="text-[#d4af37] tracking-widest uppercase text-sm mb-3">¿Hablamos?</p>
+            <h1 class="font-serif text-5xl tracking-wide mb-2">Hacé tu Pedido</h1>
+            <div class="h-[1px] w-20 bg-[#d4af37] mx-auto mb-6"></div>
+            <p class="text-gray-400 font-light">Tomamos pedidos con anticipación para garantizar la frescura de cada producto.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div class="space-y-8">
+                <div>
+                    <h3 class="font-serif text-2xl text-[#d4af37] mb-3">Zona de Entrega</h3>
+                    <p class="text-gray-300 font-light leading-relaxed">Mar del Plata, Buenos Aires.<br>Consultar por tarifas de envío a domicilio según la zona o puntos de retiro.</p>
+                </div>
+
+                <div>
+                    <h3 class="font-serif text-2xl text-[#d4af37] mb-3">Canales Directos</h3>
+                    <ul class="space-y-4 text-gray-300 font-light">
+                        <li><strong>Email:</strong> <a href="mailto:atelierpicadasmdq@gmail.com" class="text-[#d4af37] hover:underline">atelierpicadasmdq@gmail.com</a></li>
+                        <li><strong>Instagram:</strong> <a href="https://www.instagram.com/atelierpicadasmdq/" target="_blank" class="text-[#d4af37] hover:underline">@atelierpicadasmdq</a></li>
+                        <li><strong>Facebook:</strong> <a href="https://web.facebook.com/Atelierpicadas/" target="_blank" class="text-[#d4af37] hover:underline">Atelier de Picadas</a></li>
+                        <li><strong>WhatsApp:</strong> <a href="https://wa.me/5492236912698" target="_blank" class="text-[#d4af37] hover:underline">223 691-2698</a></li>
+                    </ul>
+                </div>
+
+                <div class="p-6 bg-[#1a1a1a] border border-[#2a2a2a] rounded-lg">
+                    <p class="text-[#d4af37] text-sm font-semibold mb-2">¿Tenés un evento corporativo o festejo grande?</p>
+                    <p class="text-gray-400 text-xs font-light leading-relaxed">Escribinos especificando la cantidad de personas y la fecha para armarte un presupuesto totalmente a medida.</p>
+                </div>
+            </div>
+
+            <div class="bg-[#1a1a1a] border border-[#2a2a2a] p-8 rounded-lg shadow-xl">
+                <h3 class="font-serif text-2xl text-[#d4af37] mb-6 text-center">Dejanos tu consulta</h3>
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-xs uppercase tracking-wider text-gray-400 mb-2">Nombre Completo</label>
+                        <input type="text" class="w-full bg-[#121212] border border-[#2a2a2a] rounded px-4 py-3 text-sm text-gray-200 focus:outline-none focus:border-[#d4af37] transition-colors" placeholder="Tu nombre">
+                    </div>
+                    <div>
+                        <label class="block text-xs uppercase tracking-wider text-gray-400 mb-2">Correo Electrónico</label>
+                        <input type="email" class="w-full bg-[#121212] border border-[#2a2a2a] rounded px-4 py-3 text-sm text-gray-200 focus:outline-none focus:border-[#d4af37] transition-colors" placeholder="tu@email.com">
+                    </div>
+                    <div>
+                        <label class="block text-xs uppercase tracking-wider text-gray-400 mb-2">Mensaje</label>
+                        <textarea rows="4" class="w-full bg-[#121212] border border-[#2a2a2a] rounded px-4 py-3 text-sm text-gray-200 focus:outline-none focus:border-[#d4af37] transition-colors" placeholder="¿En qué te podemos ayudar?"></textarea>
+                    </div>
+                    <a href="https://wa.me/5492236912698?text=Hola!%20Quiero%20hacer%20una%20consulta%20general." target="_blank" class="block w-full bg-[#2a2a2a] text-[#d4af37] border border-[#d4af37]/30 hover:bg-[#d4af37] hover:text-[#121212] hover:border-[#d4af37] py-3 text-xs uppercase tracking-widest font-semibold transition-all duration-300 rounded text-center">Enviar por WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="border-t border-[#2a2a2a] py-8 text-center text-xs text-gray-500 tracking-widest uppercase">
+        &copy; 2026 Atelier de Picadas. Todos los derechos reservados.
+    </footer>
+
+</body>
+</html>
