@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atelier de Picadas | Tablas Gourmet Artesanales</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        .font-serif { font-family: 'Cormorant Garamond', serif; }
+        .font-sans { font-family: 'Montserrat', sans-serif; }
+    </style>
+</head>
+<body class="bg-[#121212] text-[#f5f5f5] font-sans antialiased">
+
+    <nav class="border-b border-[#2a2a2a] bg-[#121212]/90 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="font-serif text-2xl tracking-widest text-[#d4af37]">ATELIER DE PICADAS</a>
+            <div class="space-x-8 text-sm tracking-widest uppercase">
+                <a href="index.html" class="text-[#d4af37] border-b border-[#d4af37] pb-1">Inicio</a>
+                <a href="nosotros.html" class="hover:text-[#d4af37] transition-colors">Nosotros</a>
+                <a href="contacto.html" class="hover:text-[#d4af37] transition-colors">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="relative h-[70vh] flex items-center justify-center text-center px-4 bg-cover bg-center" style="background-image: linear-gradient(rgba(18, 18, 18, 0.6), rgba(18, 18, 18, 1)), url('https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&w=1200&q=80');">
+        <div class="max-w-3xl">
+            <p class="text-[#d4af37] tracking-widest uppercase text-sm mb-3">Experiencias Gourmet</p>
+            <h1 class="font-serif text-5xl md:text-7xl font-light tracking-wide mb-6">El arte de compartir</h1>
+            <p class="text-gray-400 text-lg md:text-xl font-light max-w-2xl mx-auto mb-8">Elaboración artesanal de tablas de fiambres y quesos premium con productos seleccionados para tus momentos especiales.</p>
+            <a href="#menu" class="border border-[#d4af37] text-[#d4af37] hover:bg-[#d4af37] hover:text-[#121212] px-8 py-3 tracking-widest text-xs uppercase transition-all duration-300">Explorar Menú</a>
+        </div>
+    </header>
+
+    <main id="menu" class="max-w-6xl mx-auto px-6 py-20">
+        <div class="text-center mb-16">
+            <h2 class="font-serif text-4xl text-[#d4af37] tracking-wide mb-2">Nuestras Creaciones</h2>
+            <div class="h-[1px] w-20 bg-[#d4af37] mx-auto mb-4"></div>
+            <p class="text-gray-400 font-light">Hacé tu pedido con anticipación y disfrutá de una combinación perfecta.</p>
+        </div>
+
+        <div id="contenedor-productos" class="grid grid-cols-1 md:grid-cols-3 gap-10">
+            </div>
+    </main>
+
+    <footer class="border-t border-[#2a2a2a] py-8 text-center text-xs text-gray-500 tracking-widest uppercase">
+        &copy; 2026 Atelier de Picadas. Todos los derechos reservados.
+    </footer>
+
+    <script>
+        fetch('productos.json')
+            .then(response => response.json())
+            .then(data => {
+                const contenedor = document.getElementById('contenedor-productos');
+                data.forEach(producto => {
+                    const tarjeta = `
+                        <div class="bg-[#1a1a1a] border border-[#2a2a2a] rounded-lg overflow-hidden hover:border-[#d4af37] transition-all duration-300 group">
+                            <div class="h-64 overflow-hidden relative">
+                                <img src="${producto.imagen}" alt="${producto.nombre}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="p-6 flex flex-col justify-between h-[240px]">
+                                <div>
+                                    <h3 class="font-serif text-xl text-[#f5f5f5] mb-2">${producto.nombre}</h3>
+                                    <p class="text-gray-400 text-sm font-light line-clamp-3">${producto.descripcion}</p>
+                                </div>
+                                <div class="flex items-center justify-between mt-4">
+                                    <span class="text-[#d4af37] font-semibold text-lg">${producto.precio}</span>
+                                    <a href="https://wa.me/TU_NUMERO_DE_WHATSAPP?text=Hola!%20Quiero%20encargar%20la%20${encodeURIComponent(producto.nombre)}" target="_blank" class="bg-[#2a2a2a] text-xs uppercase tracking-wider px-4 py-2 text-gray-300 hover:bg-[#d4af37] hover:text-[#121212] transition-colors rounded">Pedir</a>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    contenedor.innerHTML += tarjeta;
+                });
+            })
+            .catch(error => console.error('Error cargando los productos:', error));
+    </script>
+</body>
+</html>
