@@ -21,12 +21,12 @@
             <div class="space-x-8 text-sm tracking-widest uppercase">
                 <a href="index.html" class="text-[#d4af37] border-b border-[#d4af37] pb-1">Inicio</a>
                 <a href="nosotros.html" class="hover:text-[#d4af37] transition-colors">Nosotros</a>
-                <a href="contacto.html" class="hover:text-[#d4af37] transition-colors">Contactos</a>
+                <a href="contacto.html" class="hover:text-[#d4af37] transition-colors">Contacto</a>
             </div>
         </div>
     </nav>
 
-    <header class="relative h-[70vh] flex items-center justify-center text-center px-4 bg-cover bg-center" style="background-image: linear-gradient(rgba(18, 18, 18, 0.6), rgba(18, 18, 18, 1)), url('https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&w=1200&q=80');">
+    <header class="relative h-[70vh] flex items-center justify-center text-center px-4 bg-cover bg-center" style="background-image: linear-gradient(rgba(18, 18, 18, 0.6), rgba(18, 18, 18, 1)), url('box-nosotros.jpg');">
         <div class="max-w-3xl">
             <p class="text-[#d4af37] tracking-widest uppercase text-sm mb-3">Experiencias Gourmet</p>
             <h1 class="font-serif text-5xl md:text-7xl font-light tracking-wide mb-6">El arte de compartir</h1>
@@ -52,14 +52,20 @@
 
     <script>
         fetch('productos.json')
-            .then(response => response.json())
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('No se pudo cargar el archivo productos.json');
+                }
+                return response.json();
+            })
             .then(data => {
                 const contenedor = document.getElementById('contenedor-productos');
+                contenedor.innerHTML = ''; // Limpia contenido previo por las dudas
                 data.forEach(producto => {
                     const tarjeta = `
                         <div class="bg-[#1a1a1a] border border-[#2a2a2a] rounded-lg overflow-hidden hover:border-[#d4af37] transition-all duration-300 group">
                             <div class="h-64 overflow-hidden relative">
-                                <img src="${producto.imagen}" alt="${producto.nombre}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                <img src="${producto.imagen}" alt="${producto.nombre}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='box-nosotros.jpg'">
                             </div>
                             <div class="p-6 flex flex-col justify-between h-[240px]">
                                 <div>
@@ -76,7 +82,10 @@
                     contenedor.innerHTML += tarjeta;
                 });
             })
-            .catch(error => console.error('Error cargando los productos:', error));
+            .catch(error => {
+                console.error('Error cargando los productos:', error);
+                document.getElementById('contenedor-productos').innerHTML = '<p class="text-center col-span-3 text-gray-500">Error al cargar el catálogo. Verificá el archivo productos.json</p>';
+            });
     </script>
 </body>
 </html>
